@@ -1,0 +1,69 @@
+
+<p class="bg-dark text-white  p-4 text-center">Tab Component</p>
+<ul class=" nav nav-pills m-4 bg-">
+    <li class="nav-item " >
+     <a href="javascript:;"  data-id="JavaScript" 
+     (click)="onTabClick($event)"
+     [ngClass]="{
+        'active' : frameWorkName == 'javascript'
+     }"
+     class="nav-link">
+        javascript
+     </a>
+    </li>
+    <li class="nav-item">
+    <a href="javascript:;" data-id="TypeScript"
+    (click)="onTabClick($event)"
+    [ngClass]="{
+        'active' : frameWorkName === 'TypeScript'
+    }"
+    class="nav-link">
+        Typescript
+    </a>
+    </li>
+    <li class="nav-item">
+      <a href="javascript:;" data-id="Angular"
+      (click)="onTabClick($event)"
+      [class.active]="frameWorkName === 'Angular'"
+        
+      
+      class="nav-link">
+        Angular
+      </a>
+    </li>
+</ul>
+<hr>
+<div class="tab-body">
+    <div class="card" *ngIf="frameWorkName ==='javascript'">
+        <div class="card-body">
+        <strong>javascript</strong>
+        JavaScript is a lightweight, cross-platform, single-threaded,
+        and interpreted compiled programming language. It is also known
+        as the scripting language for webpages. It is well-known for the 
+        development of web pages, and many non-browser environments also use it.
+        </div>
+    </div>
+    <div class="card" *ngIf="frameWorkName ==='TypeScript'">
+        <div class="card-body">
+            <strong>Typescript</strong>
+         TypeScript allows specifying the types of data being passed around within 
+         the code, and has the ability to report errors when the types don't match. 
+         For example, TypeScript will report an error when passing a string into a 
+         function that expects a number. JavaScript will not. TypeScript uses compile 
+         time type checking.
+        </div>
+    </div>
+    <div class="card" *ngIf="frameWorkName ==='Angular'">
+        <div class="card-body">
+            <strong>Angular</strong>
+            Angular is a platform and framework for building single-page client
+            applications using HTML and TypeScript. Angular is written in TypeScript.
+            It implements core and optional functionality as a set of TypeScript libraries
+             that you import into your applications.
+        </div>
+    </div>
+</div>
+
+
+
+
